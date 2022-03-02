@@ -1,0 +1,80 @@
+.toggler{
+    display: none;
+}
+
+/* HOME PAGE */
+.sec2 h1{
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+  #box{
+    width: 17rem;
+    height: 16rem;
+    padding: 1.7rem;
+   
+  }
+  .sec4{
+    height: 30rem;
+  }
+
+  #img-2{
+    width: 15rem;
+    height: 5rem;
+    padding: 6rem;
+  }
+    
+  #kad{
+    font-size: 5rem;
+    left: 4rem;
+    bottom: 15rem;
+  }
+
+  /* ABOUT */
+  .about-box1{
+    display: grid;
+    padding: 7rem;
+    grid-template-columns: 2fr;
+    grid-gap: 3rem;
+    }
+    
+
+  .about-box2{
+    grid-template-columns: 1fr;
+    padding: 7rem;
+    grid-gap: 3rem;
+  }
+  
+  /* SERVICES */
+  #services-box2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7rem 5rem;
+  }
+  #services-box2-frame{
+    display: grid;
+    grid-template-columns: 10fr;
+    /* grid-gap: 5rem; */
+    background-color: #B6D400;
+  }
+
+  /* NEWS */
+  .heading-text p{
+    margin-top: 0rem;
+    padding: 0.5rem;
+    
+  }
+  
+/* FOTTER */
+footer{
+  display: flex;
+  flex-direction: column;
+}
+
+.foot{
+  
+  grid-gap: 2rem;
+  padding: 10rem 4rem 10rem 4rem;
+   
+}

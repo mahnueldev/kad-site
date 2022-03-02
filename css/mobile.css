@@ -1,0 +1,423 @@
+/* CORE STYLES */
+:root {
+  --menu-speed: 0.75s;
+}
+
+/* NAV STYLE */
+.nav__list {
+  flex-direction: column;
+}
+
+.nav__list {
+  font-size: 2rem;
+}
+.nav__link { 
+  font-size: 1.3rem;
+}
+
+
+  /* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 90%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 300vw;
+  height: 300vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+  
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+
+.slider{
+  height: 30rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.slides input{
+  display: none;
+}
+
+.text-head{
+  left: 10rem;
+  font-size: 1.5rem; 
+  padding: 1rem;
+}
+.sec2 h1{
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.5rem;
+}
+
+.toggler{
+  display: block;
+}
+
+.navigation-manual{
+  top: 30rem;
+}
+
+
+#sec3{
+  margin: 2rem 0rem;
+}
+.box-fit{
+  flex-direction: column;
+  margin: 5rem 0rem;
+  
+
+}
+#box{
+  width: 18rem;
+  height: 13rem;
+  padding: 2rem;
+}
+
+.sec4{
+  display: flex;
+  background-color:  #2d2d2d;
+  width: 100vw;
+  height: 20rem;
+  position: relative; 
+}
+
+#img-2{
+  width: 15rem;
+  height: 5rem;
+  padding: 2rem;
+  margin:3rem;
+  top: 3rem;
+
+}
+
+#kad{
+  font-size: 2rem;
+  left: 4rem;
+  bottom: 9rem;
+}
+
+#sec5{
+  padding: 4rem 1rem;
+  
+}
+
+#sec6{
+  padding: 4rem 1rem;
+}
+.passport{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
+}
+
+
+/* ABOUT */
+
+  .about-box1{
+    display: grid;
+    padding: 4rem 1rem;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    }
+  .logo-box{
+    width: 15rem;
+    height: 15rem;
+  }
+  .logo-frame{
+    /* margin:4rem 0rem 4rem 0rem; */
+    margin:4rem 1rem;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .about-box2{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 4rem 1rem;
+    grid-gap: 3rem;
+  }
+
+  
+  /* SERVICES */
+
+#services-box2{
+  flex-direction: column;
+  padding: 4rem 3rem;
+  
+}
+
+#services-box2-frame{
+  
+  grid-template-columns: 5fr;
+  grid-gap: 1rem;
+  
+}
+#services-box2-frame h2{
+  color: #2d2d2d;
+  font-size: 1rem;
+}
+
+
+/* NEWWS */
+#news-box{
+  padding: 4rem 0rem;
+}
+
+.news-box1{
+ 
+  height: 2rem;
+ 
+}
+
+.heading-text p{
+  margin-top: 0rem;
+  padding: 1rem;
+  
+}
+
+/* PROJECTS */
+#projects-box{
+  grid-template-columns: 1fr;
+  padding: 4rem 1rem;
+  
+  
+}
+
+.projects-box-1{
+  padding: 4rem 1rem;
+}
+
+.projects-img {
+  width: 20rem;
+  height: 20rem; 
+}
+.projects-img-a, .projects-img-b, .projects-img-c{
+  width: 20rem;
+  height: 20rem; 
+}
+
+
+.projects-location{
+  width: 20rem;
+  height: 5rem;
+  
+}
+.projects-box-2{
+  height: 0rem;
+  margin-bottom: 20rem;
+  padding: 0rem;
+}
+
+.projects-solid-box{
+  width: 20rem;
+  height: 1rem;
+  background-color: #B6D400;
+}
+
+.pro-loc{
+  margin-top: 0.2rem;
+  /* margin-left: 2rem; */
+  
+  
+}
+.pro-loc p{
+ font-size: 0.9rem;
+  /* margin-left: 2rem; */
+  
+  
+}
+
+/* LEADERSHIP */
+
+.lead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+
+  
+}
+.leadership-box1{
+  height: 15rem;
+  width: 20rem;
+}
+.leadership-box2{
+  align-items: center;
+  /* height: 140rem; */
+  margin-top: 13rem;
+ }
+
+ .leadbox{
+  width: 18rem;
+  height: 20rem;
+  background-color: #333;
+ 
+}
+ .box2-pad{
+  padding: 4rem 1rem;
+}
+
+.contact-box{
+  padding: 4rem 1rem;
+  grid-template-columns: 2fr;
+  grid-gap: 1rem;
+  }
+  .contact-box-1, .contact-box-2{
+    font-size: 1.1rem;
+    }
+
+
+  /* FOOTER */
+  footer{
+  display: flex;
+  flex-direction: column;
+  
+  }
+  .foot-box{
+    justify-content: start;
+  }
+
+  .foot{
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 5rem 5rem 5rem 0rem;
+  }
+
+  /* FONTAWESOME ICONS */
+.fas{
+  font-size: 2.5rem;
+}
+ 
