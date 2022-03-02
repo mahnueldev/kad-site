@@ -1,4 +1,4 @@
-/vscode
+.vscode/
 
 #  pages
 about.html
@@ -9,4 +9,4 @@ projects.html
 services.html
 
 # images
-/images
+images
